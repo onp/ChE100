@@ -1,0 +1,180 @@
+---
+layout: post
+title:  "Chapter 1"
+date:   2014-03-05 18:36:40
+---
+
+#Processes
+These are what Chemical Engineers deal with almost all the time.
+They are any operation that causes a physical or chemical change of a substance or mixture of substances.
+
+![small process diagram]()
+
+![large process diagram]()
+
+Dedicated software can be used for plant simulation: [Aspen Plus](https://www.aspentech.com/products/aspen-plus.aspx), [HYSYS]("http://www.aspentech.com/hysys/)
+
+#Chemical Engineering Calculations
+
+##Units and Conversion
+
+_2.1, 2.2, 2.3_
+
+Dimension: Measurable Properties (*length, mass*)
+
+Units: Means to Express Dimension(*m, lbm*)
+
+###Unit Systems
+*Système Internationale (SI)* is dominant in science, and gaining dominance in trades/commerce. Only the US, Liberia and Myanmar are not using it. It is based on the metre (m), kilogram (kg), and second (s).
+
+The *CGS System* is similar to *SI*, but is based on the centimetre (cm), gram (g), and second (s).
+
+*American Engineering System of Units (AE)* is based on the foot (ft), pound mass (lbm), and second (s).
+
+A system of units must contain base (fundamental) units from which all of the others can be derived.  The 7 fundamental dimensions are:
+
+| Dimension | SI unit  | SI abbr | AE unit    | AE abbr |
+|-----------+
+| Mass      | kilogram | kg      | pound mass | lbm     |
+|-----------+
+| Length    | metre    | m       | foot       | ft      |
+|-----------+
+|Time       | second   | s       | second     | s       |
+|-----------+
+| Amount    | mole     | mol     | pound-mole | lbmol   |
+|-----------+
+| Temperature | Kelvin | K       | Rankine    | R       |
+|-----------+
+| Electric Current | Ampere | A  | Ampere     | A       |
+|-----------+
+| Light Intensity | Candela | cd |   Candela  | cd      |
+
+
+| Prefix | Abbreviation | Factor |
+|:------:|:------------:|:------:|
+| Exa | E | $$10^18$$ |
+|-----+
+| Peta | P | $$10^15$$ |
+|-----+
+| Tera  | T  | $$10^12$$ |
+|-----+
+| Giga  | G  | $$10^9$$ |
+|-----+
+| Mega  | M  | $$10^6$$ |
+|-----+
+| Kilo  | k  | $$10^3$$ |
+|-----+
+| Hecto | h  | $$10^2$$ |
+|-----+
+| Deca  | da | $$10^1$$ |
+|-----+
+| (unit) | - | $$1$$    |
+|-----+
+| deci  | d | $$10^(-1)$$ |
+|-----+
+| centi | c | $$10^(-2)$$ |
+|-----+
+| milli | m | $$10^(-3)$$ |
+|-----+
+| micro | µ | $$10^(-6)$$ |
+|-----+
+| nano  | n | $$10^(-9)$$ |
+|-----+
+| pico  | p | $$10^(-12)$$ |
+|-----+
+| femto | f | $$10^(-15)$$ |
+|-----+
+| atto  | a | $$10^(-18)$$ |
+|-----+
+
+###Derived units: a combination of base units
+
+Acceleration: $$\frac{m}{s^2}$$
+
+Force: $$\frac{kg*m}{s^2} =$$ Newton (N)
+
+Pressure: $$\frac{kg}{m*s^2} =$$ Pascal (Pa)
+
+*A number without units is meaningless except as a coefficient or ratio.*
+
+###Unit Conversion
+
+Unit Conversion is the process used to express a dimension measure given in one unit system in terms of another unit system. Conversion factors are used to make the change.
+
+
+
+**Example: Purchase of a Car**
+{: .example}
+
+Fuel Cost = $1.25/L
+
+|| Car 1     | Car 2      |
+|---
+| Purchase Price   | $13000    | $16600     |
+|---
+| Fuel Consumption | 30 mi/gal | 6L / 100km |
+
+Car 1:
+
+| 1 gal | 1000 L     | 1 mi   | 0.0787 L |
+|---
+| 30 mi | 264.17 gal | 1.6 km | km       |
+    
+Total Cost = 13000[$] + $1.25[1/L]*0.0787[L/km]*x[km]</p>
+    
+Car 2:
+| 6 L    | 0.06 L |
+| 100 km | km     |
+    
+Total Cost = 16600[$] + 1.25[$/L]*0.06[L/km]*x[km]
+
+$13000 + 1.25[$/L]*0.0787[L/km]*x[km] = $16600 + $1.25[1/L]*0.06[L/km]*x[km]
+x = 160 000 [km]
+
+Car 2 is less expensive if you drive over 160,000 km.
+
+
+###Temperature Conversion
+
+####Absolute Temperature (measured temperature)
+
+-273.15°C = 0k = -459.67°F = 0°R
+
+0°C = 273.15k = 32°F = 491.67°R
+
+T(k) = T(°C) + 273.15
+
+T(°F) = 1.8*T(°C)+32
+
+T(°R) = 1.8*T(k)
+
+####Temperature Interval (difference of temperature)
+
+1°C = 1k = 1.8°F = 1.8°R
+
+**Example: Convert gas constant from $$\frac{m^3*Pa}{mol*k}$$ to $$\frac{ft^3*atm}{lbmol*°R}**
+{: .example}
+
+| $$8.314 m^3*Pa$$ | $$3.2808^3 ft^3$$ | 1 atm               | 453.6 mol | 1 k   | $$0.7302 ft^3*atm |
+|--
+| mol*k            | $$m^3             | $$1.01325*10^5 Pa$$ | 1 lbmol   | 1.8°R | $$lbmol*°R$$ |
+
+
+##Significant Figures
+Significant figures area  way of representing the precision of your data or measurements. 13°C in  a weather forecast indicates an expected temperature between 12.5°C and 13.5°C.
+
+Rules for calculations:
+
+    *Addition/Subtraction: use the precision of the least precise value  
+     Ex. 25.4 + 3.719 = 29.1
+    *Multiplication/Division: keep the number of digits as in the shortest value  
+     Ex. 8.314*25.2 = 210
+
+
+##Force and Weight
+
+###Force
+
+From Newton's Law: $$F = m*a$$
+
+Units of Force

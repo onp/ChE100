@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Chapter 3"
+date:   2014-03-05 19:36:40
+---
+
+<h1>Processes and Process Variables</h1>
+<h2>Mass and Volume</h2>
+<p>Mass and Volume are two important properties which are related through a number of measures:</p>
+<p>Density: Mass per unit Volume.</p>
+<p>Specific Volume: Volume per unit Mass.</p>
+<p>Specific Gravity: Ratio of the density of the substance to the density of a reference substance at given conditions.  The most common reference is water at 4°C (1.00 g/cm<sup>3</sup>)</p>
+<p>Temperature and Pressure generally have only a small effect on the density of solids and liquids.</p>
+
+<figure>
+<figcaption>Example: Estimate the volume [L] of a container required to ship 1000 lbm of olive oil. (SG = 0.926)</figcaption>
+<table class="conversion">
+    <tr>
+        <td>1000 lbm</td>
+        <td>453.59 g</td>
+        <td>1 cm<sup>3</sup></td>
+        <td>1 L</td>
+        <td>489.84 L</td>
+
+    </tr>
+    <tr>
+        <td></td>
+        <td>1 lbm</td>
+        <td>0.926*1.00 g</td>
+        <td>1000 cm<sup>3</sup></td>
+        <td></td>
+    </tr>
+</table>
+</figure>
